@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a cricket match using transform & transition of css property</title>
+
+    <style>
+
+    .field{
+        background-color: #F6F6F6;
+        border: 1px solid #000;
+        height: 300px;
+        
+    }
+
+        .bat{
+            width: 250px;
+            height: 250px;
+            margin-top: 10px;
+
+            transition: transform .2s ease 0s;
+            
+        }
+
+        .bat:hover{
+            transform: rotate(-40deg);
+            transform-origin: 100% 0%;
+        }
+
+        .ball{
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            left: 228px;
+
+            transition: transform 2s ease .4s;
+
+        }
+
+        .field:hover .ball{
+            transform: translate(1000px, -200px);
+        }
+
+
+
+
+        /*Second div er jonnow CSS style (anitamion practice)*/
+
+        .fields{
+            background-color: aquamarine;
+            height: 300px;
+        }
+
+        .boll{
+            height: 80px;
+            width: 80px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+
+        }
+
+        .fields:hover .boll{
+            animation: boll 10s ease 2s infinite alternate;
+        }
+
+        @keyframes boll {
+           0%{
+            left:0;
+            top: 390px;
+            background-color: red;
+           } 
+           25%{
+            left: 25%;
+            top: 570px;
+            background-color: yellow;
+           }
+           50%{
+            left: 50%;
+            top: 390px;
+            background-color: blue;
+           }
+
+           75%{
+            left: 75%;
+            top: 570px;
+            background-color: #470d0d;
+           }
+           100%{
+            left: 90%;
+            top:390px;
+            background-color: #f31ae1;
+           }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="field">
+        <img class="bat" src="media/cricket.png" alt="">
+        <div class="ball"></div>
+    </div>
+    <br><br> <br> <br>
+    <div class="fields">
+        <div class="boll"></div>
+    </div>
+</body>
+</html>

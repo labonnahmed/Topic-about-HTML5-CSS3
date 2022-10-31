@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition of css3</title>
+    <style>
+
+.field{
+    background-color: moccasin;
+    height: auto;
+    width: 8%;
+
+    transition: width 5s ease-in 1s;
+
+}
+
+.boll{
+    height: 100px;
+    width: 100px;
+    background-color: #f81707;
+    border-radius: 50%;
+    
+    transition: background-color 5s ease 1s;
+}
+
+.boll:hover{
+    background-color: #ac0b4e;
+}
+
+.field:hover{
+    width: 50%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="field">
+        <div class="boll"></div>
+    </div>
+</body>
+</html>

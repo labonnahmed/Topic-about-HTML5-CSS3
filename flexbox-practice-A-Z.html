@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox practice A to Z</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .container{
+            width: 100%;
+            height: 300px;
+            background-color: #fafadc;
+
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            
+
+            /* 1. justify-content use korle items e flex     property use kora jabe na.
+            
+                2. items e min-width dite hobe.*/
+                justify-content:center;
+                align-items: center; /*align-items property kaj korar jonno contrainer er height barate hobe.*/
+
+           
+           
+           /* "align items:stretch" value use korle items e height bole deoa jabe na
+            
+           align-items:stretch;*/
+
+
+        }
+
+        .box{
+            height: 100px;
+            /*flex: 1 1 100px;*/
+            min-width: 100px;
+            
+
+        }
+        .one{
+            background-color: aqua;
+            /*flex: 1 1 200px;*/
+        } 
+
+        .two{
+            background-color: salmon;
+            /*flex: 1 1 100px;*/
+        } 
+
+        .three{
+            background-color: palegreen;
+            /*flex: 1 1 100px;*/
+        } 
+        
+        .four{
+            background-color: goldenrod;
+            /*flex: 1 1 100px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+    </div>
+</body>
+</html>

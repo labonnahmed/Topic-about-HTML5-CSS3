@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID PRACTICE A to Z</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container-one{
+            max-width: 1000px;
+            margin: 20px auto;
+
+            display: grid;
+            grid-gap: 10px 8px;
+
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(4, 100px);
+
+            justify-content: center;
+
+        }
+        .box{
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .box-1{
+            background-color: rgb(219, 20, 60);
+
+            grid-row: 1/3;
+            grid-column: 1/4;
+
+        }
+        .box-2{
+            background-color: rgb(199, 36, 69);
+
+            grid-row: 1/2;
+            grid-column: 4/6;
+        }
+        .box-3{
+            background-color: rgb(252, 5, 54);
+
+            grid-row: 2/3;
+            grid-column: 4/6;
+        }
+        .box-4{
+            background-color: rgb(245, 45, 85);
+
+            grid-row: 3/4;
+            grid-column: 1/6;
+        }
+        .box-5{
+            background-color: rgb(250, 4, 54);
+
+            grid-row: 4/5;
+            grid-column: 1/2;
+        }
+        .box-6{
+            background-color: rgb(196, 8, 46);
+
+            grid-row: 4/5;
+            grid-column: 2/3;
+        }
+        .box-7{
+            background-color: rgb(172, 26, 55);
+
+            grid-row: 4/5;
+            grid-column: 3/4;
+        }
+        .box-8{
+            background-color: rgb(216, 3, 46);
+
+            grid-row: 4/5;
+            grid-column: 4/5;
+        }
+        .box-9{
+            background-color: rgb(139, 4, 31);
+
+            grid-row: 4/5;
+            grid-column: 5/6;
+        }
+
+        /*Second grid layout-practice*/
+
+        .container-two{
+            max-width: 1000px;
+            margin: 20px auto;
+
+            display: grid;
+            grid-gap: 10px 8px;
+
+            grid-template-rows: repeat(12, 1fr);
+            grid-template-columns: 200px repeat(2, 100px);
+
+            justify-content: center;
+
+        }
+
+        .item-1{
+            background-color: rgb(219, 20, 60);
+
+            grid-row: 1/2;
+            grid-column: 1/4;
+        }
+        .item-2{
+            background-color: rgb(199, 36, 69);
+            grid-row: 2/5 ;
+            grid-column: 1/2;
+            
+        }
+        .item-3{
+            background-color: rgb(252, 5, 54);
+
+            grid-row: 2/7;
+            grid-column: 2/4 ;
+        }
+        .item-4{
+            background-color: rgb(245, 45, 85);
+
+            grid-row: 5/9;
+            grid-column: 1/2 ;
+        }
+        .item-5{
+            background-color: rgb(250, 4, 54);
+
+            grid-row: 7/9;
+            grid-column: 2/4 ;
+        }
+        .item-6{
+            background-color: rgb(196, 8, 46);
+
+            grid-row: 9/12;
+            grid-column: 1/3;
+        }
+        .item-7{
+            background-color: rgb(172, 26, 55);
+
+            grid-row: 9/12;
+            grid-column: 3/4 ;
+        }
+        .item-8{
+            background-color: rgb(216, 3, 46);
+
+            grid-row: 12/13 ;
+            grid-column: 1/4 ;
+        }
+
+        .image-container{
+            
+            display: grid;
+            grid-gap: 10px 8px;
+            justify-content: center;
+
+            grid-template-rows: 120px repeat(4, 70px);
+            grid-template-columns: 100px repeat(4, 70px) repeat(2, 100px);
+
+            grid-template-areas: 
+            "img-01 img-01 img-01 img-02 img-02 img-02 img-03"
+            "img-04 img-05 img-06 img-07 img-14 img-08 img-09"
+            "img-04 img-13 img-13 img-13 img-14 img-08 img-09"
+            "img-04 img-10 img-10 img-11 img-11 img-15 img-09"
+            "img-04 img-10 img-10 img-11 img-11 img-12 img-09"
+            ;
+        }
+
+         .image-1{
+            background-color: rgb(219, 20, 60);
+            grid-area: img-01;
+            
+
+        }
+        .image-2{
+            background-color: rgb(199, 36, 69);
+            grid-area: img-02;
+            
+        }
+        .image-3{
+            background-color: rgb(252, 5, 54);
+
+            grid-area: img-03;
+        }
+        .image-4{
+            background-color: rgb(245, 45, 85);
+            grid-area: img-04;
+            
+        }
+        .image-5{
+            background-color: rgb(250, 4, 54);
+            grid-area: img-05;
+            
+        }
+        .image-6{
+            background-color: rgb(196, 8, 46);
+            grid-area: img-06;
+            
+        }
+        .image-7{
+            background-color: rgb(172, 26, 55);
+            grid-area: img-07;
+            
+        }
+        .image-8{
+            background-color: rgb(216, 3, 46);
+            grid-area: img-08;
+            
+        }
+        .image-9{
+            background-color: rgb(139, 4, 31);
+            grid-area: img-09;
+            
+        }
+
+        .image-10{
+            background-color: rgb(219, 20, 60);
+            grid-area: img-10;
+
+        }
+        .image-11{
+            background-color: rgb(199, 36, 69);
+            grid-area: img-11;
+            
+        }
+        .image-12{
+            background-color: rgb(252, 5, 54);
+            grid-area: img-12;
+            
+        } 
+        .image-13{
+            background-color: rgb(172, 26, 55);
+            grid-area: img-13;
+            
+        }
+        .image-14{
+            background-color: rgb(216, 3, 46);
+            grid-area: img-14;
+            
+        }
+        .image-15{
+            background-color: rgb(139, 4, 31);
+            grid-area: img-15;
+            
+        }
+
+        .container-four{
+            height:100%;
+
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: repeat(1, 1fr);
+            grid-auto-rows: 100px;
+        }
+
+        .items-container{
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(2, 100px);
+            grid-gap: 3px;
+
+            justify-content: center; /*row*/
+            align-content: center; /*column*/
+
+            align-items: center; /*column*/ /*duniya alada*/
+
+        }
+
+        .items-container-2{
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(2, 100px);
+            grid-gap: 3px;
+
+            justify-items: center; /*row*/
+            align-items: center; /*column*/
+            
+        }
+
+        .bx{
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .items-1{
+            background-color: rgb(219, 20, 60);
+            
+            
+
+        }
+        .items-2{
+            background-color: rgb(199, 36, 69);
+            
+            
+        }
+        .items-3{
+            background-color: rgb(252, 5, 54);
+
+            
+        }
+        .items-4{
+            background-color: rgb(245, 45, 85);
+            
+            
+        }
+        .items-5{
+            background-color: rgb(250, 4, 54);
+            
+            
+        }
+        .items-6{
+            background-color: rgb(196, 8, 46);
+            
+            
+        }
+        .items-7{
+            background-color: rgb(172, 26, 55);
+            
+            
+        }
+        .items-8{
+            background-color: rgb(216, 3, 46);
+            
+            
+        }
+        .items-9{
+            background-color: rgb(139, 4, 31);
+            
+            
+        }
+
+        .items-10{
+            background-color: rgb(219, 20, 60);
+            
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Grid Layout Practice - 1</h1>
+
+    <div class="container-one">
+        <div class="box box-1">box-1</div>
+        <div class="box box-2">box-2</div>
+        <div class="box box-3">box-3</div>
+        <div class="box box-4">box-4</div>
+        <div class="box box-5">box-5</div>
+        <div class="box box-6">box-6</div>
+        <div class="box box-7">box-7</div>
+        <div class="box box-8">box-8</div>
+        <div class="box box-9">box-9</div>
+    </div>
+
+    <br><br>
+
+    <h1>Grid Layout Practice - 2</h1>
+
+    <div class="container-two">
+        <div class="box item-1">box-1</div>
+        <div class="box item-2">box-2</div>
+        <div class="box item-3">box-3</div>
+        <div class="box item-4">box-4</div>
+        <div class="box item-5">box-5</div>
+        <div class="box item-6">box-6</div>
+        <div class="box item-7">box-7</div>
+        <div class="box item-8">box-8</div>
+    </div>
+
+    <br><br>
+
+    <h1>Grid Image Gallery - 3</h1>
+
+    <div class="image-container">
+        <div class="box image-1"> image - 1</div>
+        <div class="box image-2"> image - 2</div>
+        <div class="box image-3"> image - 3</div>
+        <div class="box image-4"> image - 4</div>
+        <div class="box image-5"> image - 5</div>
+        <div class="box image-6"> image - 6</div>
+        <div class="box image-7"> image - 7</div>
+        <div class="box image-8"> image - 8</div>
+        <div class="box image-9"> image - 9</div>
+        <div class="box image-10"> image - 10</div>
+        <div class="box image-11"> image - 11</div>
+        <div class="box image-12"> image - 12</div>
+        <div class="box image-13"> image - 13</div>
+        <div class="box image-14"> image - 14</div>
+        <div class="box image-15"> image - 15</div>
+    </div>
+
+    <h1>Grid Mobile-Responsiveness Practice - 4</h1>
+
+    <div class="container-four">
+        <div class="box items-1">1</div>
+        <div class="box items-2">2</div>
+        <div class="box items-3">3</div>
+        <div class="box items-4">4</div>
+        <div class="box items-5">5</div>
+        <div class="box items-6">6</div>
+        <div class="box items-7">7</div>
+        <div class="box items-8">8</div>
+        <div class="box items-9">9</div>
+        <div class="box items-10">10</div>
+    </div>
+
+    <h1>Grid (justify-content) & (align-content) - 5</h1>
+
+    <div class="items-container">
+        <div class="bx items-1">1</div>
+        <div class="bx items-2">2</div>
+        <div class="bx items-3">3</div>
+        <div class="bx items-4">4</div>
+        <div class="bx items-5">5</div>
+        <div class="bx items-6">6</div>
+        <div class="bx items-7">7</div>
+        <div class="bx items-8">8</div>
+        <div class="bx items-9">9</div>
+        <div class="bx items-10">10</div>
+    </div>
+
+    <h1>Grid (justify-items) & (align-items) - 6</h1>
+
+    <div class="items-container-2">
+        <div class="bx items-1">1</div>
+        <div class="bx items-2">2</div>
+        <div class="bx items-3">3</div>
+        <div class="bx items-4">4</div>
+        <div class="bx items-5">5</div>
+        <div class="bx items-6">6</div>
+        <div class="bx items-7">7</div>
+        <div class="bx items-8">8</div>
+        <div class="bx items-9">9</div>
+        <div class="bx items-10">10</div>
+    </div>
+</body>
+</html>

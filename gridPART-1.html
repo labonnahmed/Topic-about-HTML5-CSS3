@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: O;
+        }
+
+        .container{
+            height: 200px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px auto 50px;
+            
+        }
+
+        .header{
+            background-color: aquamarine;
+            grid-column: 2/ 13;
+            grid-row: 1/2 ;
+            
+        }
+
+        .menu{
+            background-color: #810bb8;
+            grid-column: 1 / 3;
+            grid-row: 1/3;
+            
+        }
+
+        .content{
+            background-color: salmon;
+            grid-column: 3/ 13;
+        }
+
+        .footer{
+            background-color: mediumslateblue;
+            grid-column: 1/ -1;
+        }
+
+        .box{
+            border: 1px solid rgb(88, 85, 85);
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+
+--------------------------------------------
+
+
+        .containerSECOND{
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 100px);
+            grid-gap: 2px;
+            grid-template-areas: 
+             "h h h h h h h h h m m m"
+             "i i i i i i c c c c c c"
+             "p p p p s s s s t t t t"
+             "f f f f f f f f f f f f";
+
+        }
+
+        .one{background-color: aquamarine;
+            grid-area: h;
+        }
+
+        .two{background-color: #810bb8;
+            grid-area: m;
+            }
+
+        .three{background-color: salmon;
+            grid-area: i;
+        }
+
+        .four{background-color: mediumslateblue;
+             grid-area: c;
+            }
+
+        .five{background-color: sandybrown;
+            grid-area: p;
+        }
+
+        .six{background-color: #89cd5c;
+            grid-area: s;
+        }
+
+        .seven{background-color: #f37622;
+          grid-area: t;
+        }
+
+        .eight{background-color: #cd5cb5;
+            grid-area: f;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box header">HEADER</div>
+        <div class="box menu">MENU</div>
+        <div class="box content">CONTENT</div>
+        <div class="box footer">FOOTER</div>
+    </div>
+    <br>
+    <div class="containerSECOND">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+        <div class="box four">4</div>
+        <div class="box five">5</div>
+        <div class="box six">6</div>
+        <div class="box seven">7</div>
+        <div class="box eight">8</div>
+    </div>
+</body>
+</html>

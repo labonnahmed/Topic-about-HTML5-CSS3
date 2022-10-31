@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox in css3</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 200px;
+            margin-left: 10px;
+            font-size: 30px;
+            text-align: center;
+
+            background-color: aquamarine;
+            border-radius: 5%;
+        }
+        
+        .container{
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+
+        .entertainment{
+            flex: 1;
+        
+        }
+
+
+        /*div box 2 Css style*/
+
+        .parant{
+            display: flex;
+            align-items:flex-start;
+        }
+        
+        .parant div{
+            padding: 20px;
+            border-radius: 20px;
+
+            flex-basis: 200px;  
+        }
+
+        .child1{
+            background-color: #bf32fc;
+
+            flex: 2;
+            order: 2;
+
+        }
+        .child2{
+            background-color: #0cc0f7;
+
+            flex: 1;
+            order: 3;
+        }
+
+        .child3{
+            background-color: #f849b5;
+
+            flex: 1;
+            order: 1;
+            flex-shrink: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Study</div>
+        <div class="box">Fun</div>
+        <div class="box entertainment">Entertainment</div>
+    </div>
+
+    <br> <br>
+
+    <div class="parant">
+        <div class="child1">
+            <h2>box - 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequatur cum consequuntur suscipit facere soluta et fugit quis voluptatum libero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequatur cum consequuntur suscipit facere soluta et fugit quis voluptatum libero.</p>
+        </div>
+        <div class="child2">
+            <h2>box - 2</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eum esse quos porro expedita accusantium exercitationem sequi sapiente provident numquam!</p>
+        </div>
+        <div class="child3">
+            <h2>box - 3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum aperiam vitae labore. Ipsum, aperiam totam repudiandae necessitatibus fugit libero impedit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequatur cum consequuntur suscipit facere soluta et fugit quis voluptatum libero.</p>
+        </div>
+    </div>
+</body>
+</html>

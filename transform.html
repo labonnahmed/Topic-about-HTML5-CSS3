@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform in css</title>
+    <style>
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid #006a7c;
+}
+
+.outer{
+    background-color: aqua;
+}
+
+.inner{
+    background-color: blueviolet;
+    transform:scale(.9) translate(50px); /*using multiple value at the same time*/
+}
+
+.other-inner{
+    background-color: blueviolet;
+    transform: rotate(30deg);
+}
+    </style>
+</head>
+<body>
+    <div class="box outer">
+        <div class="box inner">box-1</div>
+    </div>
+    <div class="box outer">
+        <div class="box inner">box-2</div>
+    </div>
+    <div class="box outer">
+        <div class="box inner">box-3</div>
+    </div>
+
+    <br><br>
+
+    <div class="box outer">
+            <div class="box other-inner">box-1</div>
+        </div>
+        <div class="box outer">
+            <div class="box other-inner">box-2</div>
+        </div>
+        <div class="box outer">
+            <div class="box other-inner">box-3</div>
+     </div>
+</body>
+</html>
